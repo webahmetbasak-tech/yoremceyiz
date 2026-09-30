@@ -1,0 +1,33 @@
+{
+  "source": "User-provided collection in assets/collection",
+  "video": {
+    "original": "assets/collection/videos.mp4",
+    "delivery": [
+      "/media/collection/atelier-film.webm",
+      "/media/collection/atelier-film.mp4"
+    ],
+    "poster": "/media/collection/atelier-film-poster.webp",
+    "durationSeconds": 10,
+    "deliveryAudio": false,
+    "behavior": "Muted, inline, looped only while visibly intersecting; poster remains as fallback and under reduced motion."
+  },
+  "curatedStills": [
+    "atelier-lineup",
+    "atelier-workroom",
+    "burgundy-hanger",
+    "black-stitch",
+    "burgundy-stitch",
+    "garment-parts",
+    "green-stitch",
+    "embroidered-wordmark"
+  ],
+  "generated": {
+    "name": "sewing-construction",
+    "tool": "Built-in imagegen",
+    "referenceImages": [
+      "assets/collection/Needle_sewing_gold_thread_velvet_20260930024902.jpg",
+      "assets/collection/Tailoring_atelier_interior_design_20260930004301.jpg"
+    ],
+    "prompt": "Create a cinematic extreme close photograph of a mechanically correct vintage black sewing machine presser foot forming a precise structural seam along the edge of deep burgundy velvet, with a narrow antique-gold embroidered border already completed beside it. Authentic dark walnut couture worktable, warm 2700K brass side light, deep natural shadows, oxblood burgundy, blackened steel and muted antique gold. One machine needle and presser foot, coherent stitch spacing, no text, logo, watermark, people, hands, malformed machinery, plastic fabric or fantasy effects."
+  }
+}

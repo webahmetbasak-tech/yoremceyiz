@@ -1,0 +1,2 @@
+import type { MetadataRoute } from 'next';
+export default function manifest(): MetadataRoute.Manifest { return { name: 'Yörem Çeyiz', short_name: 'Yörem', description: 'Bir iplikle başlar. Kütahya, Türkiye.', start_url: '/', display: 'standalone', background_color: '#17110D', theme_color: '#17110D', icons: [{ src: '/media/logo/app-icon.png', sizes: '512x512', type: 'image/png', purpose: 'any' }] }; }

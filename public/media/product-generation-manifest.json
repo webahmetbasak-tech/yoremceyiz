@@ -1,0 +1,37 @@
+{
+  "tool": "Built-in imagegen",
+  "useCase": "product-mockup",
+  "reference": "Three customer-provided bindallı photographs were used for garment vocabulary, embroidery density and atelier presentation. Visible text and watermarks were excluded.",
+  "outputs": [
+    {
+      "name": "bindalli-sapphire",
+      "master": "assets/masters/bindalli-sapphire.png",
+      "delivery": ["/media/bindalli-sapphire.webp", "/media/bindalli-sapphire-mobile.webp"],
+      "prompt": "Full-length sapphire royal-blue Turkish bindallı inspired by the supplied references: authentic fitted bodice, exactly two long sleeves, open-front floor-length silhouette, ivory inner dress and antique-gold botanical scroll embroidery. Headless dress form in a refined dark-walnut atelier with an antique mirror, warm 2700K light and centered vertical 2:3 framing. Entire neckline and hem visible; real velvet and metallic cord; no people, text, logo, watermark, clutter, fantasy styling or malformed construction."
+    },
+    {
+      "name": "bindalli-ruby",
+      "master": "assets/masters/bindalli-ruby.png",
+      "delivery": ["/media/bindalli-ruby.webp", "/media/bindalli-ruby-mobile.webp"],
+      "prompt": "Distinct ruby-red velvet Turkish bindallı with a new graceful tulip, flower and vine motif in antique gold. Full-length headless dress-form portrait, exactly two sleeves, ivory inner dress, coherent construction, warm dark-walnut atelier and antique mirror, vertical 2:3 framing and 2700K side light. Red brighter than burgundy; no people, text, logo, watermark, plastic fabric, fantasy details or duplicated parts."
+    },
+    {
+      "name": "bindalli-mulberry",
+      "master": "assets/masters/bindalli-mulberry.png",
+      "delivery": ["/media/bindalli-mulberry.webp", "/media/bindalli-mulberry-mobile.webp"],
+      "prompt": "Deep mulberry-purple velvet Turkish bindallı with pomegranate blossom and slender vine embroidery in muted antique gold. Complete garment on a headless dress form, exactly two sleeves, champagne inner dress, neckline-to-hem view and believable seams. Centered vertical 2:3 luxury photography in the warm dark-walnut atelier; no magenta, burgundy, people, text, logo, watermark, fantasy costume or malformed motifs."
+    },
+    {
+      "name": "bindalli-ivory",
+      "master": "assets/masters/bindalli-ivory.png",
+      "delivery": ["/media/bindalli-ivory.webp", "/media/bindalli-ivory-mobile.webp"],
+      "prompt": "Luminous warm-ivory velvet Turkish bindallı with light champagne-gold almond blossom and curved leaf embroidery. Full-length headless dress-form portrait with exactly two sleeves, champagne inner dress, readable pale-fabric detail and entire hem visible. Centered vertical 2:3 framing, controlled warm light and dark-walnut atelier; no bridal white, people, text, logo, watermark, blown highlights, plastic satin or duplicated construction."
+    },
+    {
+      "name": "bindalli-petrol",
+      "master": "assets/masters/bindalli-petrol.png",
+      "delivery": ["/media/bindalli-petrol.webp", "/media/bindalli-petrol-mobile.webp"],
+      "prompt": "Blue-leaning deep petrol-teal velvet Turkish bindallı, distinct from emerald and royal blue, with carnation and Ottoman-inspired cloud-scroll embroidery in antique gold. Complete garment on a headless dress form with exactly two sleeves and ivory inner dress. Centered vertical 2:3 atelier portrait with 2700K light, visible velvet pile and complete hem; no neon color, people, text, logo, watermark, fantasy styling or malformed parts."
+    }
+  ]
+}

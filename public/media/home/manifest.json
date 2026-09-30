@@ -1,0 +1,65 @@
+{
+  "purpose": "Homepage-only optimized derivatives; original collection assets remain unchanged.",
+  "assets": [
+    {
+      "file": "/media/home/bindalli-sapphire.webp",
+      "width": 720,
+      "height": 1080,
+      "bytes": 137798
+    },
+    {
+      "file": "/media/home/bindalli-ruby.webp",
+      "width": 720,
+      "height": 1080,
+      "bytes": 133312
+    },
+    {
+      "file": "/media/home/bindalli-mulberry.webp",
+      "width": 720,
+      "height": 1080,
+      "bytes": 133638
+    },
+    {
+      "file": "/media/home/bindalli-ivory.webp",
+      "width": 720,
+      "height": 1080,
+      "bytes": 111644
+    },
+    {
+      "file": "/media/home/bindalli-petrol.webp",
+      "width": 720,
+      "height": 1080,
+      "bytes": 146324
+    },
+    {
+      "file": "/media/home/yorem-ceyiz-mavi-web.webp",
+      "width": 720,
+      "height": 960,
+      "bytes": 109026
+    },
+    {
+      "file": "/media/home/yorem-ceyiz-kirmizi-web.webp",
+      "width": 720,
+      "height": 960,
+      "bytes": 113018
+    },
+    {
+      "file": "/media/home/yorem-ceyiz-bordo-web.webp",
+      "width": 720,
+      "height": 900,
+      "bytes": 118084
+    },
+    {
+      "file": "/media/home/yorem-ceyiz-yesil-web.webp",
+      "width": 720,
+      "height": 900,
+      "bytes": 108336
+    },
+    {
+      "file": "/media/home/sapphire-detail.webp",
+      "width": 480,
+      "height": 612,
+      "bytes": 66216
+    }
+  ]
+}

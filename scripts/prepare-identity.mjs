@@ -1,0 +1,18 @@
+import sharp from 'sharp';
+import { mkdir, writeFile } from 'node:fs/promises';
+await mkdir('public/media/logo', { recursive:true });
+const paths = '<path d="M30 64V31M30 42C12 36 10 18 16 9c10 5 14 14 14 24C30 23 34 14 44 9c6 9 4 27-14 33ZM30 53C15 53 5 43 7 34c12 0 22 7 23 19Zm0 0c15 0 25-10 23-19-12 0-22 7-23 19ZM22 64h16M30 4v8" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="30" cy="3" r="1.5" fill="currentColor"/>';
+const svg = (content, viewBox, color) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" style="color:${color}">${content}</svg>`;
+const wordmark = `<g transform="translate(15 12)">${paths}</g><text x="90" y="58" fill="currentColor" font-family="Georgia,serif" font-size="43" letter-spacing="-1">Yörem Çeyiz</text><text x="92" y="80" fill="currentColor" font-family="Arial,sans-serif" font-size="8" letter-spacing="3">KÜTAHYA · BİNDALLI &amp; NAKIŞ</text>`;
+for (const [name,color,bg] of [['primary','#17110d',null],['navigation','#f0e8d8',null],['footer','#f0e8d8',null],['monochrome','#000000',null],['gold-on-dark','#c7a35c','#17110d'],['dark-on-cream','#17110d','#f0e8d8']]) await writeFile(`public/media/logo/${name}.svg`, svg(`${bg ? `<rect width="365" height="100" fill="${bg}"/>` : ''}${wordmark}`, '0 0 365 100',color));
+await writeFile('public/media/logo/compact.svg', svg('<text x="0" y="48" fill="currentColor" font-family="Georgia,serif" font-size="46" letter-spacing="-1">Yörem Çeyiz</text>','0 0 275 65','#17110d'));
+await writeFile('public/media/logo/emblem.svg',svg(paths,'0 0 60 72','#b8924f'));
+const icon = svg(`<rect width="100" height="100" rx="20" fill="#17110d"/><g transform="translate(20 14)">${paths}</g>`,'0 0 100 100','#c7a35c');
+await writeFile('src/app/icon.svg',icon);
+await sharp(Buffer.from(icon)).resize(512,512).png().toFile('public/media/logo/app-icon.png');
+const social = svg(`<rect width="1200" height="630" fill="#17110d"/><path d="M0 550C300 550 420 200 680 350S950 530 1200 180" fill="none" stroke="#b8924f" stroke-opacity=".3"/><g transform="translate(557 70) scale(1.4)">${paths}</g><text x="600" y="335" text-anchor="middle" font-family="Georgia,serif" font-size="100" fill="#f0e8d8">Yörem Çeyiz</text><text x="600" y="410" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" letter-spacing="7" fill="#c7a35c">BİR İPLİKLE BAŞLAR.</text><text x="600" y="555" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" letter-spacing="4" fill="#f0e8d8">KÜTAHYA, TÜRKİYE</text>`,'0 0 1200 630','#c7a35c');
+await writeFile('public/media/logo/social-mark.svg',social);
+await sharp(Buffer.from(social)).resize(1200,630).png().toFile('public/media/logo/social-preview.png');
+await writeFile('public/media/logo/thread.svg',svg('<path d="M0 200C180 260 220 15 440 95S780 230 736 112C687-18 1040 240 1200 32" stroke="currentColor" fill="none"/>','0 0 1200 260','#b8924f'));
+await writeFile('public/media/logo/kutahya-motif.svg',svg('<path d="m90 12 78 78-78 78L12 90 90 12Zm0 28 50 50-50 50-50-50 50-50ZM12 90h156M90 12v156" fill="none" stroke="currentColor" stroke-width=".7"/>','0 0 180 180','#24517a'));
+console.log('Identity assets written.');
