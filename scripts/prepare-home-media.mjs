@@ -1,4 +1,5 @@
 import sharp from 'sharp';
+import { isExcluded } from './media-policy.mjs';
 import { mkdir, writeFile } from 'node:fs/promises';
 
 await mkdir('public/media/home', { recursive: true });
@@ -15,6 +16,7 @@ const portraits = [
   ['yorem-ceyiz-yesil-web', 'assets/yorem-ceyiz-yesil-web.png'],
 ];
 for (const [file, source] of portraits) {
+  if (await isExcluded(`public/media/home/${file}.webp`)) continue;
   const result = await sharp(source).resize({ width: 720, withoutEnlargement: true }).webp({ quality: 80, effort: 6 }).toFile(`public/media/home/${file}.webp`);
   assets.push({ file: `/media/home/${file}.webp`, width: result.width, height: result.height, bytes: result.size });
 }

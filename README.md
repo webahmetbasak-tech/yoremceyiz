@@ -1,6 +1,8 @@
 # Yörem Çeyiz
 
-Türkçe, editoryal bindallı ve nakış sitesi. Next.js App Router, React, TypeScript, CSS ve yalnızca sinematik girişte dinamik yüklenen GSAP/ScrollTrigger. Temel içerik sunucuda oluşturulur; ana sayfa ve koleksiyon sayfaları önceden üretilir.
+Güncel deneyim: **Ana sayfada altı ürün, masaüstünde 3 × 2 sabit vitrin**, altında `/koleksiyon` bağlantısı; katalogda 17 tasarım. Ayrı renk bölümü ve yatay slider kaldırıldı. Bordo kadife, antik altın, parşömen ve özgün lale/dal çizimleriyle Osmanlı süsleme geleneğinden esinlenen tema uygulanır. GSAP yalnızca dekoratif çizgiler ve hafif bölüm hareketleri için dinamik yüklenir. Fotoğraf büyütme ve formsuz iletişim korunur. [Son tasarım turu](docs/HEIRLOOM-REVISION.md) kullanıcı isteğiyle henüz test edilmedi. Aşağıdaki önceki tasarım notları tarihsel bağlam içerir.
+
+Türkçe, editoryal bindallı ve nakış sitesi. Next.js App Router, React, TypeScript, CSS ve dinamik GSAP. Temel içerik sunucuda oluşturulur; görseller animasyondan bağımsız görünür. Sabitlenmiş kaydırma alanı kullanılmaz.
 
 ## Çalıştırma
 
@@ -34,11 +36,11 @@ Tarayıcı yüklü değilse: `npx playwright install chromium`. Testler üretim 
 
 ## İçerik ve yayın ayarları
 
-`.env.example` dosyasını `.env.local` olarak kopyalayın ve yalnızca doğrulanmış bilgileri girin. Eksik telefon, e-posta, adres ve sosyal hesaplar arayüzde gösterilmez. Alan adı girilmediğinde `robots.txt` indekslemeyi engeller; sitemap boş kalır. `NEXT_PUBLIC_SITE_URL` HTTPS üretim alan adı olarak girilince canonical, sitemap ve indeksleme açılır. Bu değişikliklerden sonra yeniden derleyin.
+Kullanıcının sağladığı telefon (`0534 665 84 81`), WhatsApp (`905346658481`), açık adres ve Google Haritalar bağlantısı `src/lib/site.ts` içinde varsayılan olarak tanımlıdır. `.env.example` aynı bilgileri içerir; ortam değişkenleri bu değerleri değiştirebilir. Eksik e-posta ve sosyal hesaplar arayüzde gösterilmez. Alan adı girilmediğinde `robots.txt` indekslemeyi engeller; sitemap boş kalır. `NEXT_PUBLIC_SITE_URL` HTTPS üretim alan adı olarak girilince canonical, sitemap ve indeksleme açılır. Yayın ayarları değiştiğinde yeniden derleyin.
 
 Ürün ve marka verileri: `src/lib/site.ts`. Gerçek kumaş içeriği, teknik, stok, fiyat, kurucu veya kuruluş tarihi uydurulmamıştır. Kampanya görselleri yapay zekâyla bu proje için üretilen tasarım görselleridir; stok veya gerçek atölye fotoğrafı olarak sunulmaz. Ürün sayfalarındaki yakın planlar aynı tasarımın kırpımlarıdır. Gerçek ürün doğrulaması gelmeden Product/Offer/Review şeması yayımlanmaz.
 
-İletişim formu sunucuya veri göndermez ve veri saklamaz. Önce bir not oluşturur. Kullanıcı notu indirebilir; doğrulanmış kanal ayarlanmışsa e-posta/WhatsApp uygulamasını açabilir. Gönderimi bu uygulamada kullanıcı tamamlar. Sahte başarı bildirimi yoktur.
+İletişim sayfası formsuzdur; doğrudan WhatsApp, telefon ve Google Haritalar bağlantılarını kullanır. WhatsApp mesajını kullanıcı açılan uygulamada gönderir.
 
 ## Tasarım ve mimari
 

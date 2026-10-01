@@ -13,3 +13,15 @@ export function Thread({ className = '' }: { className?: string }) {
 export function Motif() {
   return <svg className="heritage-motif" viewBox="0 0 180 180" fill="none" aria-hidden="true"><path d="m90 12 78 78-78 78L12 90 90 12Zm0 28 50 50-50 50-50-50 50-50Zm0 26 24 24-24 24-24-24 24-24ZM12 90h156M90 12v156" stroke="currentColor" strokeWidth=".7"/><circle cx="90" cy="90" r="65" stroke="currentColor" strokeWidth=".7"/></svg>;
 }
+
+export function EmbroiderySeal({ className = '' }: { className?: string }) {
+  return <svg className={`embroidery-seal ${className}`} viewBox="0 0 200 240" fill="none" aria-hidden="true">
+    <g stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
+      <path data-gold-line d="M100 220V92M100 102C77 88 70 63 76 35l24 21 24-21c6 28-1 53-24 67ZM100 94c-9-22-11-51 0-77 11 26 9 55 0 77Z"/>
+      <path data-gold-line d="M100 179c-42-9-72-41-65-77 7 23 31 13 39 37 7 20 16 30 26 40Zm0-28c30-5 58-25 65-60-32 10-51 26-65 60ZM100 204c-47-8-71-35-71-62M100 195c45-11 64-35 70-70"/>
+      <path d="M72 139c-28 1-41-16-36-28m96 5c-1 23-13 29-25 32M87 213h26M84 224h32"/>
+      <path data-gold-line d="M60 58c-33 18-48 63-38 103 10 35 38 59 61 70M140 58c33 18 48 63 38 103-10 35-38 59-61 70"/>
+      <path d="m54 70-12-3 3 14m-21 46-11 9 12 5m121-71 12-3-3 14m21 46 11 9-12 5"/>
+    </g><circle cx="100" cy="7" r="2" fill="currentColor"/><circle cx="100" cy="235" r="2" fill="currentColor"/>
+  </svg>;
+}

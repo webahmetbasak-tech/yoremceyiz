@@ -1,4 +1,5 @@
 import sharp from 'sharp';
+import { isExcluded } from './media-policy.mjs';
 import { mkdir, readdir, copyFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
@@ -20,6 +21,7 @@ const selections = [
 ];
 
 for (const [name, prefix] of selections) {
+  if (await isExcluded(join(target, `${name}.webp`))) continue;
   const file = files.find(candidate => candidate.startsWith(prefix));
   if (!file) throw new Error(`Missing collection asset: ${prefix}`);
   const input = join(source, file);

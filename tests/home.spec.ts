@@ -25,8 +25,8 @@ test('four supplied colors are visible outside the horizontal gallery and galler
   await page.goto('/');
   const cards = page.locator('.color-story-card');
   await expect(cards).toHaveCount(4);
-  const galleryImages = page.locator('.collection-track .collection-media img');
-  await expect(galleryImages).toHaveCount(6);
+  const galleryImages = page.locator('.edition-rail .collection-media img');
+  await expect(galleryImages).toHaveCount(13);
   for (let index = 0; index < await galleryImages.count(); index++) {
     await expect(galleryImages.nth(index)).toHaveAttribute('loading', 'eager');
     await expect.poll(() => galleryImages.nth(index).evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBeTruthy();
@@ -36,10 +36,9 @@ test('four supplied colors are visible outside the horizontal gallery and galler
     await expect(cards.nth(index)).toHaveAttribute('href', `/koleksiyon/${slug}-altin`);
     await expect.poll(() => cards.nth(index).locator('img').evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBeTruthy();
   }
-  await page.locator('.heritage-section').scrollIntoViewIfNeeded();
-  await expect(page.locator('#heritage-title')).toBeVisible();
-  await expect(page.locator('#heritage-title')).toHaveCSS('clip-path', 'none');
-  await expect(page.locator('.heritage-section img')).toHaveCount(1);
+  await page.locator('.atelier-journal').scrollIntoViewIfNeeded();
+  await expect(page.locator('#journal-title')).toBeVisible();
+  await expect(page.locator('.journal-motifs img')).toHaveCount(5);
 });
 
 test('reduced motion keeps the film still until played deliberately', async ({ page }) => {
@@ -55,9 +54,8 @@ test('reduced motion keeps the film still until played deliberately', async ({ p
 test('landscape phone gallery uses a controllable horizontal track', async ({ page }) => {
   await page.setViewportSize({ width: 844, height: 390 });
   await page.goto('/');
-  await page.locator('.collection-sticky').scrollIntoViewIfNeeded();
-  await expect(page.locator('.collection-sticky')).toHaveCSS('position', 'relative');
+  await page.locator('.edition-showcase').scrollIntoViewIfNeeded();
   await page.getByRole('button', { name: 'Sonraki galeri karesi' }).click();
-  await expect.poll(() => page.locator('.collection-track').evaluate(element => element.scrollLeft)).toBeGreaterThan(100);
+  await expect.poll(() => page.locator('.edition-rail').evaluate(element => element.scrollLeft)).toBeGreaterThan(100);
   await expect(page.getByRole('button', { name: 'Önceki galeri karesi' })).toBeEnabled();
 });

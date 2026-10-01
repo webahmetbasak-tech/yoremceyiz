@@ -1,0 +1,47 @@
+@layer heirloom {
+  .signature-ribbon { position:relative;isolation:isolate;display:grid;place-items:center;width:100%;height:100px;margin-bottom:clamp(46px,5vw,78px);overflow:hidden;border-block:1px solid #c6a56838;background:linear-gradient(90deg,#160f12,#25151c 42%,#25151c 58%,#160f12);color:#e1b865; }
+  .signature-ribbon::before { content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 35%,#ffe8a30d 48%,#ffe8a31d 50%,#ffe8a30d 52%,transparent 65%);transform:translateX(-75%);animation:signature-shimmer 1.5s .35s var(--ease) both; }
+  .signature-ribbon-branches { position:absolute;inset:0;width:100%;height:100%;stroke:currentColor;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;opacity:.72;pointer-events:none; }
+  .signature-ribbon-branches path { stroke-dasharray:520;stroke-dashoffset:520;animation:signature-draw .9s var(--ease) forwards; }
+  .signature-ribbon-branches path:nth-child(2n) { animation-delay:.07s; }
+  .signature-ribbon-branches path:nth-child(3n) { animation-delay:.13s; }
+  .signature-ribbon-name { position:relative;display:flex;align-items:center;justify-content:center;gap:clamp(14px,2.2vw,34px);min-width:min(58vw,620px);padding-inline:clamp(18px,3vw,46px);background:linear-gradient(90deg,transparent,#25151cef 13%,#25151c 87%,transparent);line-height:1;opacity:0;transform:translateY(7px);animation:signature-reveal .55s .3s var(--ease) forwards; }
+  .signature-ribbon-name>span { font:italic 500 clamp(32px,3.7vw,55px)/1 var(--serif);letter-spacing:-.025em;white-space:nowrap;background:linear-gradient(105deg,#a97d35,#f1d68e 45%,#b78941 78%);background-clip:text;-webkit-background-clip:text;color:transparent; }
+  .signature-ribbon-name>i { width:24px;height:1px;background:#c59c52;transform:scaleX(0);animation:signature-rule .4s .65s var(--ease) forwards; }
+  .signature-ribbon-name>small { font:600 clamp(7px,.65vw,9px)/1 var(--sans);letter-spacing:.36em;padding-left:.36em;color:#c8a15c;white-space:nowrap; }
+  @keyframes signature-draw { to { stroke-dashoffset:0; } }
+  @keyframes signature-reveal { to { opacity:1;transform:none; } }
+  @keyframes signature-rule { to { transform:scaleX(1); } }
+  @keyframes signature-shimmer { to { transform:translateX(75%); } }
+
+  .footer-signature { display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 0 clamp(35px,5vw,75px);margin-top:clamp(45px,6vw,90px); }
+  .footer-signature-ornament { display:flex;align-items:center;justify-content:center;gap:clamp(20px,3vw,48px);width:min(100%,570px); }
+  .footer-signature-ornament>.embroidery-seal { width:48px;height:58px;color:#c4a36c; }
+  .footer-signature-ornament>span { flex:1;height:1px;position:relative;background:linear-gradient(90deg,transparent,#b58c4f77); }
+  .footer-signature-ornament>span:last-child { transform:rotate(180deg); }
+  .footer-signature-ornament>span::after { content:"";position:absolute;right:0;top:-2px;width:5px;height:5px;border:1px solid #c4a36c;transform:rotate(45deg);background:#211516; }
+  .site-footer .footer-name { width:100%;text-align:center;font:400 clamp(62px,14.3vw,250px)/1.1 var(--serif);letter-spacing:-.055em;margin:15px 0 21px;color:#ede0c9; }
+  .footer-name em { font-weight:400;color:#ccab70; }
+  .footer-signature-note { display:flex;justify-content:center;align-items:center;gap:18px;font-size:8px;letter-spacing:.22em;line-height:1.8;color:#bfa886; }
+  .footer-signature-note>span { font-size:15px;line-height:1;color:#c4a36c; }
+
+  @media(max-width:760px) {
+    .signature-ribbon { height:100px;margin-bottom:46px; }
+    .signature-ribbon-branches { width:150%;left:-25%; }
+    .signature-ribbon-name { min-width:0;width:auto;gap:12px;padding-inline:18px; }
+    .signature-ribbon-name>span { font-size:clamp(29px,9.5vw,42px); }
+    .signature-ribbon-name>i { width:12px; }
+    .signature-ribbon-name>small { font-size:6px;letter-spacing:.25em;padding-left:.25em; }
+    .footer-signature-ornament { width:min(80%,380px);gap:25px; }
+    .footer-signature-ornament>.embroidery-seal { width:35px;height:42px; }
+    .site-footer .footer-name { font-size:clamp(46px,13.5vw,100px);letter-spacing:-.05em;margin:16px 0 18px; }
+    .footer-signature-note { font-size:6px;letter-spacing:.1em;gap:10px; }
+    .footer-signature-note>span { font-size:11px; }
+  }
+  @media(prefers-reduced-motion:reduce) {
+    .signature-ribbon::before,.signature-ribbon-branches path,.signature-ribbon-name,.signature-ribbon-name>i { animation:none; }
+    .signature-ribbon-branches path { stroke-dashoffset:0; }
+    .signature-ribbon-name { opacity:1;transform:none; }
+    .signature-ribbon-name>i { transform:scaleX(1); }
+  }
+}

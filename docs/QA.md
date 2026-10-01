@@ -1,5 +1,9 @@
 # Son QA raporu
 
+**Son tasarım turu — test bekliyor:** Renk bölümü kaldırıldı; ana sayfa galerisi altı ürünlü sabit 3 × 2 vitrine dönüştü; tüm sayfalara bordo–altın tema ve GSAP/SVG süsleme hareketleri eklendi. Kullanıcının açık talebiyle bu turda test, lint, typecheck, build veya tarayıcı denetimi çalıştırılmadı. Aşağıdaki başarılı sonuçlar önceki sürüme aittir. Eski yatay galeri ve dört renk senaryoları yeni tasarıma göre sonraki test turunda güncellenmelidir.
+
+**1 Ekim 2026, son tur:** Ürün odaklı yeni düzen üretim sürümünde **26/26 testten geçti**. Son başlangıç-etkileşimi düzeltmesi ayrıca doğrulandı. Araştırma, güncel kalite ayarları ve doğrulama kapsamı [COUTURE-REVISION.md](COUTURE-REVISION.md) içindedir. WhatsApp numarası ve kesin adres henüz sağlanmadığı için gerçek işletme iletişimi tamamlanmış değildir. Aşağıdaki kayıtlar önceki tasarım turlarına aittir.
+
 En son anasayfa revizyonu: **22/22 test**, ayrıca Chromium/WebKit ile **13/13 ekran düzeni** başarılı. Beş yeni rengin anasayfa sunumu, Kütahya kompozisyonu, başlık görünürlüğü, yatay telefon galerisi ve erken video yüklemesinin ayrıntılı sonuçları [HOME-REVISION.md](HOME-REVISION.md) içindedir. Aşağıdaki önceki koleksiyon turu tarihsel kayıttır; güncel performans ölçümleri yeni rapordadır.
 
 ## Ortam

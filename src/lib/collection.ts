@@ -1,0 +1,29 @@
+export type Product = { slug: string; name: string; title: string; color: string; image: string; index: string; tone: string; description: string; category: 'Bindallı' | 'Yöresel takım' | 'Gece elbisesi'; detail?: string };
+const designs: Omit<Product, 'index'>[] = [
+  {slug:'bordo-altin',name:'Bordo / Sarma',title:'Bir mirasın rengi.',color:'Bordo',image:'editions/bordo-sarma',tone:'#5A101D',category:'Bindallı',detail:'editions/sc-bordo-kus',description:'Bordo zeminde altın renkli sarma motifler. Uzun ceket ve etek boyunca devam eden nakış, silüeti bir bütün olarak çerçeveler.'},
+  {slug:'siyah-altin',name:'Siyah / Sarma',title:'Geceye işlenen iz.',color:'Siyah',image:'editions/siyah-sarma',tone:'#17110D',category:'Bindallı',detail:'editions/sc-siyah-altin',description:'Siyahın derinliği üzerinde yoğun altın renkli yapraklar. Ceketin önünde ve kollarında belirginleşen işlemelerle güçlü bir yorum.'},
+  {slug:'yakut-altin',name:'Al / Kaftan',title:'Kırmızının törensel hâli.',color:'Al',image:'editions/kirmizi-kaftan',tone:'#A51222',category:'Bindallı',detail:'editions/sc-kirmizi-sarma',description:'Kırmızı kaftanda genişleyen kollar, altın renkli kıvrımlar ve belde birleşen bir silüet. Kına gecelerinin canlı renk dünyası.'},
+  {slug:'safir-altin',name:'Safir / Gümüş',title:'Mavinin ince çizgisi.',color:'Safir',image:'editions/safir-gumus',tone:'#244690',category:'Bindallı',description:'Safir mavisinde açık renkli dallar ve bordürler. Uzun ceket ve etek arasında devam eden desenin zarif ritmi.'},
+  {slug:'bordo-kus',name:'Bordo / Kuş Motifi',title:'Kanatlarında bir hikâye.',color:'Bordo',image:'editions/bordo-kus',tone:'#52162C',category:'Bindallı',detail:'editions/sc-bordo-kus',description:'Bordo üzerinde kuş ve bitki motifleri. Başörtüsü, geniş kollar ve altın renkli işleme, yöresel bir bütünlük oluşturur.'},
+  {slug:'lacivert-gumus',name:'Lacivert / Gümüş',title:'Gecenin aydınlık yüzü.',color:'Lacivert',image:'editions/lacivert-gumus',tone:'#14233E',category:'Bindallı',description:'Lacivert kumaşta gümüş renkli işlemeler ve açık renkli örtü. Bordürler silüetin etrafında kesintisiz bir çizgi kurar.'},
+  {slug:'siyah-gumus',name:'Siyah / Gümüş',title:'İki rengin zarafeti.',color:'Siyah',image:'editions/siyah-gumus',tone:'#27211D',category:'Yöresel takım',detail:'editions/sc-siyah-gumus',description:'Siyah üzerine açık renkli nakış, çiçekli örtü ve bol kesim. Yöresel giyimin katmanlı anlatımına sade bir yorum.'},
+  {slug:'al-cepken',name:'Al / Cepken',title:'Çiçeğe işlenen gelenek.',color:'Al',image:'editions/al-cepken',tone:'#B22624',category:'Yöresel takım',detail:'editions/sc-kirmizi-sarma',description:'Altın renkli işlemeli kırmızı cepken, çiçek desenli açık renk alt parçayla buluşur. Geleneksel kesimin sıcak ve canlı bir yorumu.'},
+  {slug:'mint-salvar',name:'Çağla / Şalvar',title:'Baharın ilk rengi.',color:'Çağla',image:'editions/mint-salvar',tone:'#A5B197',category:'Yöresel takım',description:'Çağla yeşili üst, çiçekli şalvar ve bel detayı. Hafif tonların bir araya geldiği zarif bir yöresel takım.'},
+  {slug:'pudra-salvar',name:'Pudra / Şalvar',title:'İnce bir bahar hatırası.',color:'Pudra',image:'editions/pudra-salvar',tone:'#C99B9D',category:'Yöresel takım',description:'Pudra renkli üst, desenli şalvar ve işlemeli kemer. Kumaşın yumuşak hareketiyle tamamlanan katmanlı bir görünüm.'},
+  {slug:'bal-salvar',name:'Bal / Şalvar',title:'Toprağın sıcak tonu.',color:'Bal',image:'editions/bal-salvar',tone:'#B08758',category:'Yöresel takım',description:'Bal tonlu üst, çiçekli şalvar ve eşlik eden örtü. Sıcak renkleri bir araya getiren geleneksel bir kompozisyon.'},
+  {slug:'mavi-salvar',name:'Mavi / Şalvar',title:'Duru bir çizgi.',color:'Mavi',image:'editions/mavi-salvar',tone:'#415F85',category:'Yöresel takım',description:'Açık renkli üst ve mavi desenli şalvar. Beldeki ince detayla tamamlanan, hareketli ve ferah bir silüet.'},
+  {slug:'siyah-inci',name:'Siyah / İnci',title:'Işığın izinde.',color:'Siyah',image:'editions/siyah-inci',tone:'#191715',category:'Gece elbisesi',description:'Siyah uzun elbisede katmanlı, inci görünümündeki süslemeler. Omuzlardan bele yayılan çizgilerle aydınlanan bir gece silüeti.'},
+  {slug:'mavi-bahar-altin',name:'Mavi Bahar / Altın',title:'Çiçeklerle açılan mavi.',color:'Mavi Bahar',image:'editions/mavi-bahar',tone:'#17499A',category:'Yöresel takım',description:'Canlı mavi ceket, kıvrımlı altın renkli işlemeler ve çiçek desenli açık etekle buluşur.'},
+  {slug:'kirmizi-lale-altin',name:'Kırmızı Lale / Altın',title:'Kırmızının güçlü çizgisi.',color:'Kırmızı Lale',image:'editions/kirmizi-lale',tone:'#B5162D',category:'Bindallı',description:'Kırmızı üzerinde simetrik altın motifler ve katmanlı bel detayı. Güçlü ve törensel bir silüet.'},
+  {slug:'bordo-bahar-altin',name:'Bordo Bahar / Altın',title:'Kadifede bahar izi.',color:'Bordo Bahar',image:'editions/bordo-bahar',tone:'#661044',category:'Yöresel takım',description:'Derin bordo ceket, yoğun altın kıvrımlar ve çiçek desenli etekle tamamlanır.'},
+  {slug:'yesil-lale-altin',name:'Yeşil Lale / Altın',title:'Yeşilde yükselen motif.',color:'Yeşil Lale',image:'editions/yesil-lale',tone:'#075B3A',category:'Bindallı',description:'Doygun yeşil üzerinde lale çağrışımlı altın nakışlar ve katmanlı bel formu.'},
+];
+export const products: Product[] = designs.map((design,i)=>({...design,index:String(i+1).padStart(2,'0')}));
+export const newEditionProducts = products.slice(0,13);
+export const featuredProducts = products.slice(0,6);
+export const motifs = [
+  {image:'editions/sc-siyah-altin',name:'Altının gölgesi',note:'SİYAH / BİTKİSEL MOTİF'},
+  {image:'editions/sc-bordo-kus',name:'Kanatlı bir hatıra',note:'BORDO / KUŞ MOTİFİ'},
+  {image:'editions/sc-kirmizi-sarma',name:'Kıvrımın ritmi',note:'AL / SARMA'},
+  {image:'editions/sc-siyah-gumus',name:'Işıkla çizilen',note:'SİYAH / GÜMÜŞ RENKLİ NAKIŞ'},
+];

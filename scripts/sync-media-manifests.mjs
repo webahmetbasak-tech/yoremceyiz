@@ -1,0 +1,17 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { isExcluded } from './media-policy.mjs';
+const read=async path=>JSON.parse(await readFile(path,'utf8'));
+const save=(path,data)=>writeFile(path,JSON.stringify(data,null,2)+'\n');
+const current=await read('public/media/manifest.json');
+const approved=[];
+for(const asset of current)if(!asset.file.startsWith('/media/editions/')&&!await isExcluded('public'+asset.file))approved.push(asset);
+const editions=await read('public/media/editions/manifest.json');
+await save('public/media/manifest.json',[...approved,...editions.assets.map(a=>({...a,name:'editions/'+a.name,provenance:'User-supplied artwork from public/media/ek; optimized without changing the source composition.'}))]);
+const collection=await read('public/media/collection/manifest.json');
+const stills=[];for(const name of collection.curatedStills)if(!await isExcluded(`public/media/collection/${name}.webp`))stills.push(name);
+collection.curatedStills=stills;collection.video.poster='/media/editions/sc-atolye.webp';
+await save('public/media/collection/manifest.json',collection);
+const home=await read('public/media/home/manifest.json');
+const assets=[];for(const asset of home.assets)if(!await isExcluded('public'+asset.file))assets.push(asset);
+await save('public/media/home/manifest.json',{...home,assets});
+console.log('Active media manifests synchronized with x-prefix exclusions and the new editions.');

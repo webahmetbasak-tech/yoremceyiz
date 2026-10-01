@@ -1,4 +1,5 @@
 import sharp from 'sharp';
+import { isExcluded } from './media-policy.mjs';
 import { mkdir, stat } from 'node:fs/promises';
 
 const products = [
@@ -12,6 +13,7 @@ const products = [
 await mkdir('public/media', { recursive: true });
 
 for (const name of products) {
+  if (await isExcluded(`public/media/${name}.webp`)) continue;
   const source = `assets/masters/${name}.png`;
   const desktop = `public/media/${name}.webp`;
   const mobile = `public/media/${name}-mobile.webp`;

@@ -1,4 +1,4 @@
-@layer base, layout, components, responsive;
+@layer base, layout, components, responsive, editions, couture, heirloom;
 @layer base {
   :root { --ink:#0b0a08; --black-walnut:#17110d; --walnut:#2a1a13; --burgundy:#5a101d; --crimson:#761629; --deep-red:#421018; --emerald:#123b30; --antique-gold:#b8924f; --warm-gold:#c7a35c; --dark-gold:#806331; --cream:#f0e8d8; --paper:#e6dcc9; --cobalt:#24517a; --muted:#aaa090; --serif:'Cormorant Garamond Variable',Georgia,serif; --sans:'Manrope Variable',Arial,sans-serif; --gutter:clamp(24px,4.5vw,86px); --ease:cubic-bezier(.22,1,.36,1); }
   *,*::before,*::after { box-sizing:border-box; }

@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-const routes = ['/', '/koleksiyon', '/koleksiyon/bordo-altin', '/koleksiyon/siyah-altin', '/koleksiyon/zumrut-altin', '/koleksiyon/safir-altin', '/koleksiyon/yakut-altin', '/koleksiyon/murdum-altin', '/koleksiyon/fildisi-altin', '/koleksiyon/petrol-altin', '/koleksiyon/mavi-bahar-altin', '/koleksiyon/kirmizi-lale-altin', '/koleksiyon/bordo-bahar-altin', '/koleksiyon/yesil-lale-altin', '/atolye', '/hikayemiz', '/iletisim'];
+import { products } from '../src/lib/collection';
+const routes = ['/', '/koleksiyon', ...products.map(p => `/koleksiyon/${p.slug}`), '/atolye', '/hikayemiz', '/iletisim'];
 
 for (const width of [1920, 1440, 1366, 1024, 768, 430, 390, 360]) {
   test(`responsive pages at ${width}px`, async ({ page }) => {
@@ -8,7 +9,7 @@ for (const width of [1920, 1440, 1366, 1024, 768, 430, 390, 360]) {
     const errors: string[] = [];
     page.on('pageerror', e => errors.push(e.message));
     for (const route of routes) {
-      const response = await page.goto(route);
+      const response = await page.goto(route,{waitUntil:'domcontentloaded'});
       expect(response?.status()).toBe(200);
       await expect(page.locator('h1')).toHaveCount(1);
       await expect(page.locator('meta[property="og:image"]').first()).toHaveAttribute('content', /social-preview.png/);
@@ -20,17 +21,12 @@ for (const width of [1920, 1440, 1366, 1024, 768, 430, 390, 360]) {
   });
 }
 
-test('hero is reversible and leaves the viewport naturally', async ({ page }) => {
+test('opening shows a complete product and reaches the collection directly', async ({ page }) => {
   await page.goto('/');
-  await page.waitForFunction(() => document.querySelector('.scene-1')?.getAttribute('style'));
-  const distance = await page.locator('.hero-experience').evaluate(el => el.getBoundingClientRect().height - innerHeight);
-  for (const [fraction, scene] of [[.30, 1], [.50, 2], [.70, 3], [.94, 4], [0, 0]]) {
-    await page.evaluate(y => window.scrollTo({ top: y, behavior: 'instant' }), distance * fraction);
-    await expect(page.locator(`.scene-${scene}`)).toBeVisible();
-    await expect(page.locator(`.scene-${scene}`)).toHaveCSS('opacity', '1');
-  }
-  await page.locator('.scroll-note').click();
-  await expect(page.locator('#manifesto')).toBeInViewport();
+  await expect(page.locator('.couture-product img')).toHaveCSS('object-fit','contain');
+  await expect.poll(()=>page.locator('.couture-product img').evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBeTruthy();
+  await page.getByRole('link',{name:'SEÇKİYİ KEŞFET',exact:true}).click();
+  await expect(page.locator('#selection-title')).toBeInViewport();
 });
 
 test('mobile menu traps focus, closes on Escape and restores focus', async ({ page }) => {
@@ -54,11 +50,11 @@ test('mobile menu traps focus, closes on Escape and restores focus', async ({ pa
   expect(await page.evaluate(() => document.body.style.overflow)).toBe('');
 });
 
-test('reduced motion preserves every story scene and navigation', async ({ page }) => {
+test('reduced motion preserves the full composition without hidden content', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
-  await expect(page.locator('.cinema-frame')).toHaveCSS('position', 'relative');
-  for (let i = 0; i < 5; i++) await expect(page.locator(`.scene-${i}`)).toBeVisible();
+  await expect(page.locator('.couture-intro')).toHaveCSS('animation-name','none');
+  await expect(page.locator('.couture-product')).toBeVisible();
   await expect(page.locator('.custom-cursor')).not.toBeVisible();
 });
 
@@ -68,28 +64,24 @@ test('collection controls and product inquiry preserve selection', async ({ page
   await next.scrollIntoViewIfNeeded();
   await next.click();
   await expect(page.getByRole('button', { name: 'Önceki galeri karesi' })).toBeEnabled();
-  await page.goto('/koleksiyon/zumrut-altin');
+  await page.goto('/koleksiyon/yesil-lale-altin');
   await page.getByRole('link', { name: 'BU TASARIMI KONUŞALIM' }).click();
-  await expect(page.getByLabel('İlginizi çeken')).toHaveValue('zumrut-altin');
-  await page.getByLabel('Adınız').fill('Deneme');
-  await page.getByLabel('Bize anlatmak istedikleriniz').fill('Zümrüt renk ve altın motifler üzerine görüşmek istiyorum.');
-  await page.getByRole('button', { name: 'GÖRÜŞME NOTUNU HAZIRLA' }).click();
-  await expect(page.getByText('Notunuz hazır.')).toBeVisible();
-  await expect(page.locator('.contact-result pre')).toContainText('Zümrüt / Altın');
-  const downloadPromise = page.waitForEvent('download');
-  await page.getByRole('button', { name: 'NOTU İNDİR' }).click();
-  expect((await downloadPromise).suggestedFilename()).toBe('yorem-ceyiz-gorusme-notu.txt');
+  await expect(page.locator('.contact-selected')).toContainText('Yeşil Lale / Altın');
+  await expect(page.locator('form')).toHaveCount(0);
+  await expect(page.locator('.contact-map iframe')).toHaveAttribute('src',/maps.google.com/);
+  const whatsapp = page.locator('a.contact-whatsapp');
+  if(await whatsapp.count()) expect(decodeURIComponent(await whatsapp.getAttribute('href')||'')).toContain('Yeşil Lale / Altın');
 });
 
-test('collection archive presents all twelve color stories', async ({ page }) => {
+test('collection archive presents all approved designs', async ({ page }) => {
   await page.goto('/koleksiyon');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('on iki hâli');
-  await expect(page.locator('.archive-card')).toHaveCount(12);
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Binbir hikâye');
+  await expect(page.locator('.archive-card')).toHaveCount(products.length);
   const archiveImages = page.locator('.archive-card img');
   for (let index = 0; index < await archiveImages.count(); index++) {
     await expect(archiveImages.nth(index)).toHaveAttribute('loading', 'eager');
   }
-  for (const slug of ['safir-altin', 'yakut-altin', 'murdum-altin', 'fildisi-altin', 'petrol-altin', 'mavi-bahar-altin', 'kirmizi-lale-altin', 'bordo-bahar-altin', 'yesil-lale-altin']) {
+  for (const slug of products.map(p => p.slug)) {
     const card = page.locator(`.archive-card[href="/koleksiyon/${slug}"]`);
     await card.scrollIntoViewIfNeeded();
     await expect(card).toBeVisible();
@@ -111,13 +103,13 @@ test('all pages meet automated WCAG 2.2 AA checks', async ({ page }) => {
 test('touch navigation and mobile inquiry work', async ({ browser }) => {
   const context = await browser.newContext({ viewport:{ width:390,height:844 }, isMobile:true, hasTouch:true, deviceScaleFactor:2 });
   const page = await context.newPage();
-  await page.goto('http://localhost:3000');
+  await page.goto(process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000');
   await page.getByRole('button', { name:'MENÜ' }).tap();
   await page.getByRole('dialog').getByRole('link', { name:'Koleksiyon' }).tap();
   await page.locator('.archive-card').first().tap();
   await expect(page).toHaveURL(/bordo-altin/);
   await page.getByRole('link', { name:'BU TASARIMI KONUŞALIM' }).tap();
-  await expect(page.getByLabel('İlginizi çeken')).toHaveValue('bordo-altin');
+  await expect(page.locator('.contact-selected')).toContainText('Bordo / Sarma');
   await context.close();
 });
 
@@ -130,16 +122,12 @@ test('horizontal collection travels, stays controllable and keeps film silent', 
   await expect.poll(() => film.evaluate((node: HTMLVideoElement) => !node.paused)).toBeTruthy();
   await page.getByRole('button', { name: 'Atölye filmini durdur' }).click();
   await expect(page.getByRole('button', { name: 'Atölye filmini oynat' })).toBeVisible();
-  const section = page.locator('.collection-section');
-  const track = page.locator('.collection-track');
-  const geometry = await section.evaluate(element => ({ top: element.getBoundingClientRect().top + scrollY, range: element.getBoundingClientRect().height - innerHeight }));
-  await page.evaluate(({ top, range }) => scrollTo({ top: top + range * .52, behavior: 'instant' }), geometry);
-  await expect.poll(() => track.evaluate(element => getComputedStyle(element).transform)).not.toBe('none');
-  await expect(page.locator('.collection-controls').getByText(/0[3-5] \/ 06/)).toBeVisible();
-  await expect(page.locator('.stitch-section h2')).toContainText('Dikiş kurar.');
-  await page.locator('.stitch-section').scrollIntoViewIfNeeded();
-  await expect(page.locator('.stitch-section h2')).toBeVisible();
-  for (const image of await page.locator('.stitch-section img').all()) await expect.poll(() => image.evaluate((node: HTMLImageElement) => node.complete && node.naturalWidth > 0)).toBeTruthy();
+  const track = page.locator('.edition-rail');
+  await track.scrollIntoViewIfNeeded();
+  await page.getByRole('button', { name: 'Sonraki galeri karesi' }).click();
+  await expect.poll(() => track.evaluate(element => element.scrollLeft)).toBeGreaterThan(100);
+  await expect(page.locator('.atelier-journal')).toHaveCount(1);
+  await expect(page.locator('.journal-motifs img')).toHaveCount(5);
 });
 
 test('media, metadata, 404 and identity assets resolve', async ({ page, request }) => {
@@ -160,21 +148,20 @@ test('capture desktop and mobile compositions', async ({ page }) => {
   await page.setViewportSize({ width:1440, height:960 });
   await page.goto('/');
   await page.evaluate(() => document.fonts.ready);
-  await expect.poll(() => page.locator('.scene-0 img').evaluate((img: HTMLImageElement) => img.complete)).toBeTruthy();
+  await expect.poll(() => page.locator('.couture-product img').evaluate((img: HTMLImageElement) => img.complete)).toBeTruthy();
   await page.screenshot({ path:'output/qa/home-desktop.png' });
   await page.emulateMedia({ reducedMotion:'reduce' });
-  await expect(page.locator('.hero-scene img')).toHaveCount(5);
   const allImages = page.locator('main img');
   for (let i=0; i < await allImages.count(); i++) {
     await allImages.nth(i).scrollIntoViewIfNeeded();
     await expect.poll(() => allImages.nth(i).evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBeTruthy();
   }
-  await page.evaluate(() => { window.scrollTo({ top:0, behavior:'instant' }); document.querySelector('.collection-track')?.scrollTo({ left:0, behavior:'instant' }); });
+  await page.evaluate(() => { window.scrollTo({ top:0, behavior:'instant' }); document.querySelector('.edition-rail')?.scrollTo({ left:0, behavior:'instant' }); });
   await page.screenshot({ path:'output/qa/home-full.png', fullPage:true });
   await page.setViewportSize({ width:390, height:844 });
   await page.emulateMedia({ reducedMotion:'no-preference' });
   await page.goto('/');
-  await expect.poll(() => page.locator('.scene-0 img').evaluate((img: HTMLImageElement) => img.complete)).toBeTruthy();
+  await expect.poll(() => page.locator('.couture-product img').evaluate((img: HTMLImageElement) => img.complete)).toBeTruthy();
   await page.screenshot({ path:'output/qa/home-mobile.png' });
   await page.goto('/koleksiyon/bordo-altin');
   const productImages = page.locator('main img');

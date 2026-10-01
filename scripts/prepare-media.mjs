@@ -1,10 +1,12 @@
 import sharp from 'sharp';
+import { isExcluded } from './media-policy.mjs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 const assets = JSON.parse(await readFile(new URL('./asset-sources.json', import.meta.url), 'utf8'));
 await mkdir('public/media', { recursive: true });
 await mkdir('output/qa', { recursive: true });
 const manifest = [];
 for (const asset of assets) {
+  if (await isExcluded(`public/media/${asset.name}.webp`)) continue;
   const info = await sharp(asset.source).resize({ width: 1680, withoutEnlargement: true }).webp({ quality: 86, effort: 6 }).toFile(`public/media/${asset.name}.webp`);
   await sharp(asset.source).resize({ width: 750, withoutEnlargement: true }).webp({ quality: 82, effort: 6 }).toFile(`public/media/${asset.name}-mobile.webp`);
   manifest.push({ name: asset.name, file: `/media/${asset.name}.webp`, width: info.width, height: info.height, bytes: info.size, provenance: 'Original AI-generated campaign artwork; not documentary product photography.', prompt: asset.prompt });

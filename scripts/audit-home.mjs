@@ -21,7 +21,7 @@ for (const [engine, browserType, widths] of [['chromium', chromium, [320, 360, 3
     if (width <= 700 || width === 844) expect(earlyFilm.source).toContain('atelier-film-mobile.mp4');
     await expect(page.locator('.color-story-card')).toHaveCount(4);
     await expect(page.locator('.heritage-section img')).toHaveCount(1);
-    const sections = ['.hero-experience', '.manifesto-body', '.manifesto-film', '.collection-sticky', '.home-colors', '.stitch-section', '.heritage-section', '.final-cta', 'footer'];
+    const sections = ['.hero-experience', '.manifesto-body', '.manifesto-film', '.edition-showcase', '.home-colors', '.motif-library', '.stitch-section', '.heritage-section', '.final-cta', 'footer'];
     for (const selector of sections) {
       const section = page.locator(selector);
       await section.scrollIntoViewIfNeeded();
@@ -32,7 +32,7 @@ for (const [engine, browserType, widths] of [['chromium', chromium, [320, 360, 3
       }
       for (const img of await section.locator('img').all()) {
         // Only the horizontal gallery's visible panel needs to decode here.
-        if (selector === '.collection-sticky') continue;
+        if (selector === '.edition-showcase') continue;
         await img.scrollIntoViewIfNeeded();
         await expect.poll(() => img.evaluate(node => node.complete && node.naturalWidth > 0)).toBeTruthy();
       }

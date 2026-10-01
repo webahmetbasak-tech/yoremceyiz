@@ -6,15 +6,12 @@
       "/media/collection/atelier-film.webm",
       "/media/collection/atelier-film.mp4"
     ],
-    "poster": "/media/collection/atelier-film-poster.webp",
+    "poster": "/media/editions/sc-atolye.webp",
     "durationSeconds": 10,
     "deliveryAudio": false,
     "behavior": "Muted, inline, looped only while visibly intersecting; poster remains as fallback and under reduced motion."
   },
   "curatedStills": [
-    "atelier-lineup",
-    "atelier-workroom",
-    "burgundy-hanger",
     "black-stitch",
     "burgundy-stitch",
     "garment-parts",

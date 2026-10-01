@@ -27,33 +27,6 @@
     "prompt": "Use case: photorealistic-natural. Original campaign photography for Turkish couture atelier Yörem Çeyiz. Consistent campaign art direction: deep oxblood burgundy velvet, muted antique gold embroidery, dark walnut, warm 2700K side lighting with deep natural shadows, tactile true textile fibers, analog medium format fashion editorial photography, rich but restrained colors, natural film grain. Absolutely no human faces, people, mannequin, fantasy, palace, crowns, watermark, typography or collage. Landscape 16:9 extreme macro diagonal composition of exquisite raised metallic gold botanical embroidery on burgundy velvet. Tangible velvet pile, tiny gold filaments, small leaves and looping stems. Warm grazing light, crisp detail on right, soft dark burgundy negative space on left."
   },
   {
-    "name": "bindalli-burgundy",
-    "file": "/media/bindalli-burgundy.webp",
-    "width": 1024,
-    "height": 1536,
-    "bytes": 277130,
-    "provenance": "Original AI-generated campaign artwork; not documentary product photography.",
-    "prompt": "Use case: photorealistic-natural. Original campaign photography for Turkish couture atelier Yörem Çeyiz. Consistent campaign art direction: deep oxblood burgundy velvet, muted antique gold embroidery, dark walnut, warm 2700K side lighting with deep natural shadows, tactile true textile fibers, analog medium format fashion editorial photography, rich but restrained colors, natural film grain. Absolutely no human faces, people, mannequin, fantasy, palace, crowns, watermark, typography or collage. Portrait 2:3 full length exquisitely made deep burgundy velvet Turkish bindallı ceremonial coat, symmetric fine gold botanical embroidered borders and cuffs, two naturally draped sleeves, open front over matching skirt, hanging from ONE dark walnut wooden hanger on antique brass rail, no mannequin or person. Entire hem visible. Centered in dark working atelier, aged brick, subtle walnut drawers and warm brass lamp. Sculptural elegant silhouette, true garment construction. Restrained timeless editorial photo."
-  },
-  {
-    "name": "bindalli-black",
-    "file": "/media/bindalli-black.webp",
-    "width": 1024,
-    "height": 1536,
-    "bytes": 253212,
-    "provenance": "Original AI-generated campaign artwork; not documentary product photography.",
-    "prompt": "Use case: photorealistic-natural. Original campaign photography for Turkish couture atelier Yörem Çeyiz. Consistent campaign art direction: deep oxblood burgundy velvet, muted antique gold embroidery, dark walnut, warm 2700K side lighting with deep natural shadows, tactile true textile fibers, analog medium format fashion editorial photography, rich but restrained colors, natural film grain. Absolutely no human faces, people, mannequin, fantasy, palace, crowns, watermark, typography or collage. Portrait 2:3 full length exquisitely made black velvet Turkish bindallı ceremonial coat, symmetric fine antique gold botanical embroidered borders and cuffs, two naturally draped sleeves, open front over matching skirt, hanging from ONE dark walnut wooden hanger on antique brass rail, no mannequin or person. Entire hem visible. Centered in dark working atelier, aged brick, subtle walnut drawers and warm brass lamp. Sculptural elegant silhouette, true garment construction. Match burgundy collection campaign composition."
-  },
-  {
-    "name": "bindalli-emerald",
-    "file": "/media/bindalli-emerald.webp",
-    "width": 1024,
-    "height": 1536,
-    "bytes": 306858,
-    "provenance": "Original AI-generated campaign artwork; not documentary product photography.",
-    "prompt": "Use case: photorealistic-natural. Original campaign photography for Turkish couture atelier Yörem Çeyiz. Consistent campaign art direction: deep oxblood burgundy velvet, muted antique gold embroidery, dark walnut, warm 2700K side lighting with deep natural shadows, tactile true textile fibers, analog medium format fashion editorial photography, rich but restrained colors, natural film grain. Absolutely no human faces, people, mannequin, fantasy, palace, crowns, watermark, typography or collage. Portrait 2:3 full length exquisitely made deep emerald velvet Turkish bindallı ceremonial coat, symmetric fine antique gold botanical embroidered borders and cuffs, two naturally draped sleeves, open front over matching skirt, hanging from ONE dark walnut wooden hanger on antique brass rail, no mannequin or person. Entire hem visible. Centered in dark working atelier, aged brick, subtle walnut drawers and warm brass lamp. Sculptural elegant silhouette, true garment construction. Match burgundy collection campaign composition."
-  },
-  {
     "name": "atelier",
     "file": "/media/atelier.webp",
     "width": 1672,
@@ -133,5 +106,245 @@
     "bytes": 132020,
     "provenance": "Original AI-generated campaign artwork; not documentary product photography.",
     "prompt": "Kullanıcı tarafından sağlanan altın iplik makaraları atölye fotoğrafı. Web için optimize edilmiş türev; kaynak içerik değiştirilmedi."
+  },
+  {
+    "name": "editions/collection-portrait",
+    "source": "public/media/ek/ChatGPT Görseli 1 Eki 2026 02_20_19.png",
+    "file": "/media/editions/collection-portrait.webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 510088,
+    "mobileBytes": 161884,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/mint-salvar",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943.jpg",
+    "file": "/media/editions/mint-salvar.webp",
+    "width": 768,
+    "height": 1376,
+    "bytes": 204514,
+    "mobileBytes": 145576,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/siyah-inci",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_2.jpg",
+    "file": "/media/editions/siyah-inci.webp",
+    "width": 896,
+    "height": 1200,
+    "bytes": 187078,
+    "mobileBytes": 113004,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/pudra-salvar",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_3.jpg",
+    "file": "/media/editions/pudra-salvar.webp",
+    "width": 768,
+    "height": 1376,
+    "bytes": 231778,
+    "mobileBytes": 174704,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/lacivert-gumus",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_4.jpg",
+    "file": "/media/editions/lacivert-gumus.webp",
+    "width": 896,
+    "height": 1200,
+    "bytes": 211844,
+    "mobileBytes": 141096,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/al-cepken",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_5.jpg",
+    "file": "/media/editions/al-cepken.webp",
+    "width": 896,
+    "height": 1200,
+    "bytes": 261490,
+    "mobileBytes": 172022,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/bal-salvar",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_6.jpg",
+    "file": "/media/editions/bal-salvar.webp",
+    "width": 768,
+    "height": 1376,
+    "bytes": 211362,
+    "mobileBytes": 157452,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/mavi-salvar",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_7.jpg",
+    "file": "/media/editions/mavi-salvar.webp",
+    "width": 768,
+    "height": 1376,
+    "bytes": 230776,
+    "mobileBytes": 177134,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/bordo-kus",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944.jpg",
+    "file": "/media/editions/bordo-kus.webp",
+    "width": 768,
+    "height": 1376,
+    "bytes": 220750,
+    "mobileBytes": 173016,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/kirmizi-kaftan",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_2.jpg",
+    "file": "/media/editions/kirmizi-kaftan.webp",
+    "width": 896,
+    "height": 1200,
+    "bytes": 209434,
+    "mobileBytes": 129112,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/safir-gumus",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_3.jpg",
+    "file": "/media/editions/safir-gumus.webp",
+    "width": 896,
+    "height": 1200,
+    "bytes": 241196,
+    "mobileBytes": 159374,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/siyah-gumus",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_4.jpg",
+    "file": "/media/editions/siyah-gumus.webp",
+    "width": 896,
+    "height": 1200,
+    "bytes": 192684,
+    "mobileBytes": 127200,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/bordo-sarma",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_5.jpg",
+    "file": "/media/editions/bordo-sarma.webp",
+    "width": 896,
+    "height": 1200,
+    "bytes": 218054,
+    "mobileBytes": 140342,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/siyah-sarma",
+    "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_6.jpg",
+    "file": "/media/editions/siyah-sarma.webp",
+    "width": 896,
+    "height": 1200,
+    "bytes": 199018,
+    "mobileBytes": 127360,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/kus-motif",
+    "source": "public/media/ek/Gold_embroidery_on_burgundy_velvet_20261001040347.jpg",
+    "file": "/media/editions/kus-motif.webp",
+    "width": 768,
+    "height": 1376,
+    "bytes": 335738,
+    "mobileBytes": 268212,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/sc-siyah-altin",
+    "source": "public/media/ek/sc-Gold_embroidery_on_black_fabric_20261001040622.jpg",
+    "file": "/media/editions/sc-siyah-altin.webp",
+    "width": 1376,
+    "height": 768,
+    "bytes": 402338,
+    "mobileBytes": 144676,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/sc-bordo-kus",
+    "source": "public/media/ek/sc-Gold_embroidery_on_burgundy_velvet_20261001040457.jpg",
+    "file": "/media/editions/sc-bordo-kus.webp",
+    "width": 1376,
+    "height": 768,
+    "bytes": 387104,
+    "mobileBytes": 130356,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/sc-kirmizi-sarma",
+    "source": "public/media/ek/sc-Gold_embroidery_on_red_fabric_20261001040822.jpg",
+    "file": "/media/editions/sc-kirmizi-sarma.webp",
+    "width": 1376,
+    "height": 768,
+    "bytes": 291690,
+    "mobileBytes": 111660,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/sc-atolye",
+    "source": "public/media/ek/sc-Tailoring_atelier_interior_with_…_20261001031022.jpg",
+    "file": "/media/editions/sc-atolye.webp",
+    "width": 1376,
+    "height": 768,
+    "bytes": 180154,
+    "mobileBytes": 56702,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/sc-siyah-gumus",
+    "source": "public/media/ek/sc-White_embroidery_on_black_fabric_20261001040525.jpg",
+    "file": "/media/editions/sc-siyah-gumus.webp",
+    "width": 1376,
+    "height": 768,
+    "bytes": 266932,
+    "mobileBytes": 98546,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/bordo-bahar",
+    "source": "public/media/ek/yorem-ceyiz-bordo-web.webp",
+    "file": "/media/editions/bordo-bahar.webp",
+    "width": 720,
+    "height": 900,
+    "bytes": 141248,
+    "mobileBytes": 127992,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/kirmizi-lale",
+    "source": "public/media/ek/yorem-ceyiz-kirmizi-web.webp",
+    "file": "/media/editions/kirmizi-lale.webp",
+    "width": 720,
+    "height": 960,
+    "bytes": 138616,
+    "mobileBytes": 122092,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/mavi-bahar",
+    "source": "public/media/ek/yorem-ceyiz-mavi-web.webp",
+    "file": "/media/editions/mavi-bahar.webp",
+    "width": 720,
+    "height": 960,
+    "bytes": 130236,
+    "mobileBytes": 115834,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
+  },
+  {
+    "name": "editions/yesil-lale",
+    "source": "public/media/ek/yorem-ceyiz-yesil-web.webp",
+    "file": "/media/editions/yesil-lale.webp",
+    "width": 720,
+    "height": 900,
+    "bytes": 129996,
+    "mobileBytes": 117440,
+    "provenance": "User-supplied artwork from public/media/ek; optimized without changing the source composition."
   }
 ]

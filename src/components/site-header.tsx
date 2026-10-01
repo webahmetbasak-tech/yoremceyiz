@@ -33,7 +33,7 @@ export function SiteHeader() {
     return () => { element.removeEventListener('keydown', trap); element.close(); document.body.style.overflow = previous; returnFocus?.focus(); };
   }, [open]);
   const close = () => setOpen(false);
-  const light = pathname !== '/' && pathname !== '/atolye' && !pathname.startsWith('/koleksiyon/');
+  const light = pathname !== '/' && pathname !== '/atolye' && !pathname.startsWith('/koleksiyon');
   return <><header className={`site-header ${light ? 'on-paper' : ''} ${scrolled ? 'is-scrolled' : ''}`}>
     <Link href="/" className="brand-link" aria-label="Yörem Çeyiz — Ana sayfa"><Wordmark/></Link>
     <nav className="desktop-nav" aria-label="Ana gezinme">{navigation.map((item) => <Link key={item.href} href={item.href} aria-current={pathname.startsWith(item.href) ? 'page' : undefined}>{item.label}{item.href === '/iletisim' && <span aria-hidden="true"> ↗</span>}</Link>)}</nav>

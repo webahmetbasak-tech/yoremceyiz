@@ -1,0 +1,221 @@
+{
+  "purpose": "Approved ek assets; x-prefixed artwork excluded.",
+  "assets": [
+    {
+      "name": "collection-portrait",
+      "source": "public/media/ek/ChatGPT Görseli 1 Eki 2026 02_20_19.png",
+      "file": "/media/editions/collection-portrait.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 510088,
+      "mobileBytes": 161884
+    },
+    {
+      "name": "mint-salvar",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943.jpg",
+      "file": "/media/editions/mint-salvar.webp",
+      "width": 768,
+      "height": 1376,
+      "bytes": 204514,
+      "mobileBytes": 145576
+    },
+    {
+      "name": "siyah-inci",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_2.jpg",
+      "file": "/media/editions/siyah-inci.webp",
+      "width": 896,
+      "height": 1200,
+      "bytes": 187078,
+      "mobileBytes": 113004
+    },
+    {
+      "name": "pudra-salvar",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_3.jpg",
+      "file": "/media/editions/pudra-salvar.webp",
+      "width": 768,
+      "height": 1376,
+      "bytes": 231778,
+      "mobileBytes": 174704
+    },
+    {
+      "name": "lacivert-gumus",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_4.jpg",
+      "file": "/media/editions/lacivert-gumus.webp",
+      "width": 896,
+      "height": 1200,
+      "bytes": 211844,
+      "mobileBytes": 141096
+    },
+    {
+      "name": "al-cepken",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_5.jpg",
+      "file": "/media/editions/al-cepken.webp",
+      "width": 896,
+      "height": 1200,
+      "bytes": 261490,
+      "mobileBytes": 172022
+    },
+    {
+      "name": "bal-salvar",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_6.jpg",
+      "file": "/media/editions/bal-salvar.webp",
+      "width": 768,
+      "height": 1376,
+      "bytes": 211362,
+      "mobileBytes": 157452
+    },
+    {
+      "name": "mavi-salvar",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035943_7.jpg",
+      "file": "/media/editions/mavi-salvar.webp",
+      "width": 768,
+      "height": 1376,
+      "bytes": 230776,
+      "mobileBytes": 177134
+    },
+    {
+      "name": "bordo-kus",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944.jpg",
+      "file": "/media/editions/bordo-kus.webp",
+      "width": 768,
+      "height": 1376,
+      "bytes": 220750,
+      "mobileBytes": 173016
+    },
+    {
+      "name": "kirmizi-kaftan",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_2.jpg",
+      "file": "/media/editions/kirmizi-kaftan.webp",
+      "width": 896,
+      "height": 1200,
+      "bytes": 209434,
+      "mobileBytes": 129112
+    },
+    {
+      "name": "safir-gumus",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_3.jpg",
+      "file": "/media/editions/safir-gumus.webp",
+      "width": 896,
+      "height": 1200,
+      "bytes": 241196,
+      "mobileBytes": 159374
+    },
+    {
+      "name": "siyah-gumus",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_4.jpg",
+      "file": "/media/editions/siyah-gumus.webp",
+      "width": 896,
+      "height": 1200,
+      "bytes": 192684,
+      "mobileBytes": 127200
+    },
+    {
+      "name": "bordo-sarma",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_5.jpg",
+      "file": "/media/editions/bordo-sarma.webp",
+      "width": 896,
+      "height": 1200,
+      "bytes": 218054,
+      "mobileBytes": 140342
+    },
+    {
+      "name": "siyah-sarma",
+      "source": "public/media/ek/ChatGPT_Görseli_1_Eki_2026_20261001035944_6.jpg",
+      "file": "/media/editions/siyah-sarma.webp",
+      "width": 896,
+      "height": 1200,
+      "bytes": 199018,
+      "mobileBytes": 127360
+    },
+    {
+      "name": "kus-motif",
+      "source": "public/media/ek/Gold_embroidery_on_burgundy_velvet_20261001040347.jpg",
+      "file": "/media/editions/kus-motif.webp",
+      "width": 768,
+      "height": 1376,
+      "bytes": 335738,
+      "mobileBytes": 268212
+    },
+    {
+      "name": "sc-siyah-altin",
+      "source": "public/media/ek/sc-Gold_embroidery_on_black_fabric_20261001040622.jpg",
+      "file": "/media/editions/sc-siyah-altin.webp",
+      "width": 1376,
+      "height": 768,
+      "bytes": 402338,
+      "mobileBytes": 144676
+    },
+    {
+      "name": "sc-bordo-kus",
+      "source": "public/media/ek/sc-Gold_embroidery_on_burgundy_velvet_20261001040457.jpg",
+      "file": "/media/editions/sc-bordo-kus.webp",
+      "width": 1376,
+      "height": 768,
+      "bytes": 387104,
+      "mobileBytes": 130356
+    },
+    {
+      "name": "sc-kirmizi-sarma",
+      "source": "public/media/ek/sc-Gold_embroidery_on_red_fabric_20261001040822.jpg",
+      "file": "/media/editions/sc-kirmizi-sarma.webp",
+      "width": 1376,
+      "height": 768,
+      "bytes": 291690,
+      "mobileBytes": 111660
+    },
+    {
+      "name": "sc-atolye",
+      "source": "public/media/ek/sc-Tailoring_atelier_interior_with_…_20261001031022.jpg",
+      "file": "/media/editions/sc-atolye.webp",
+      "width": 1376,
+      "height": 768,
+      "bytes": 180154,
+      "mobileBytes": 56702
+    },
+    {
+      "name": "sc-siyah-gumus",
+      "source": "public/media/ek/sc-White_embroidery_on_black_fabric_20261001040525.jpg",
+      "file": "/media/editions/sc-siyah-gumus.webp",
+      "width": 1376,
+      "height": 768,
+      "bytes": 266932,
+      "mobileBytes": 98546
+    },
+    {
+      "name": "bordo-bahar",
+      "source": "public/media/ek/yorem-ceyiz-bordo-web.webp",
+      "file": "/media/editions/bordo-bahar.webp",
+      "width": 720,
+      "height": 900,
+      "bytes": 141248,
+      "mobileBytes": 127992
+    },
+    {
+      "name": "kirmizi-lale",
+      "source": "public/media/ek/yorem-ceyiz-kirmizi-web.webp",
+      "file": "/media/editions/kirmizi-lale.webp",
+      "width": 720,
+      "height": 960,
+      "bytes": 138616,
+      "mobileBytes": 122092
+    },
+    {
+      "name": "mavi-bahar",
+      "source": "public/media/ek/yorem-ceyiz-mavi-web.webp",
+      "file": "/media/editions/mavi-bahar.webp",
+      "width": 720,
+      "height": 960,
+      "bytes": 130236,
+      "mobileBytes": 115834
+    },
+    {
+      "name": "yesil-lale",
+      "source": "public/media/ek/yorem-ceyiz-yesil-web.webp",
+      "file": "/media/editions/yesil-lale.webp",
+      "width": 720,
+      "height": 900,
+      "bytes": 129996,
+      "mobileBytes": 117440
+    }
+  ]
+}

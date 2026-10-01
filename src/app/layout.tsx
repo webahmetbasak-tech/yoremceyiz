@@ -3,9 +3,14 @@ import '@fontsource-variable/cormorant-garamond';
 import '@fontsource-variable/cormorant-garamond/wght-italic.css';
 import '@fontsource-variable/manrope';
 import './globals.css';
+import './editions.css';
+import './couture.css';
+import './heirloom.css';
+import './thread-alchemy.css';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { Enhancements } from '@/components/enhancements';
+import { EmbroideryMotion } from '@/components/embroidery-motion';
 import { site } from '@/lib/site';
 
 const description = 'Kütahya’da bindallı, dikiş ve nakış. Yörem Çeyiz’in iplikten kadifeye uzanan dünyasını ve bindallı seçkisini keşfedin.';
@@ -20,6 +25,6 @@ export const metadata: Metadata = {
   icons: { icon: '/icon.svg', apple: '/media/logo/app-icon.png' },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const data = { '@context': 'https://schema.org', '@type': 'Organization', name: site.name, ...(site.url ? { url: site.url, logo: `${site.url}/media/logo/primary.svg` } : {}), ...(site.email ? { email: site.email } : {}), ...(site.phone ? { telephone: site.phone } : {}), ...(site.instagram ? { sameAs: [site.instagram] } : {}) };
-  return <html lang="tr"><body id="top"><a href="#main" className="skip-link">İçeriğe geç</a><SiteHeader/><main id="main" tabIndex={-1}>{children}</main><SiteFooter/><Enhancements/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }}/></body></html>;
+  const data = { '@context': 'https://schema.org', '@type': 'Organization', name: site.name, ...(site.url ? { url: site.url, logo: `${site.url}/media/logo/primary.svg` } : {}), ...(site.email ? { email: site.email } : {}), ...(site.phone ? { telephone: site.phone } : {}), ...(site.address ? { address: site.address } : {}), ...(site.instagram ? { sameAs: [site.instagram] } : {}) };
+  return <html lang="tr"><body id="top"><a href="#main" className="skip-link">İçeriğe geç</a><SiteHeader/><main id="main" tabIndex={-1}>{children}</main><SiteFooter/><Enhancements/><EmbroideryMotion/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }}/></body></html>;
 }
