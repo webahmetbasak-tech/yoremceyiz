@@ -28,7 +28,7 @@ Bu imza için istemci bileşeni, dinamik modül, WebGL renderer, font rasterizas
 
 ## Durum
 
-Son atölye düzenlemesi: ana sayfada kısa başlık, tam genişlikte film ve tek atölye bağlantısı kullanılır. Filmin üzerindeki büyük slogan ve karartma kaldırıldı; oynatma kontrolü görüntünün altındadır. Yan fotoğraf kaldırıldı, beş motif görseli atölye sayfasındaki motif arşivine taşındı. 100 px imza bandı bölümün sonunda yer alır. Mobilde film kendi 16:9 çerçevesinde tam görünür.
+Son atölye düzenlemesi: ana sayfada kısa başlık altında 2:1 sütun oranı kullanılır; film masaüstünde alanın yaklaşık %66,7'sini kaplar. Sağda altın vurgulu serif başlık, kısa açıklama ve tek atölye bağlantısı bulunur. Filmin üzerindeki büyük slogan ve karartma kaldırıldı; oynatma kontrolü görüntünün altındadır. Yan fotoğraf kaldırıldı, beş motif görseli atölye sayfasındaki motif arşivine taşındı. 100 px imza bandı bölümün sonunda yer alır. Mobilde video üstte, metin altta yer alır; film kendi 16:9 çerçevesinde tam görünür.
 
 Kullanıcı talebi doğrultusunda test, lint, typecheck, build ve tarayıcı denetimi çalıştırılmadı. Önceki turdaki test/performans sonuçları bu sürüm için doğrulama sayılmaz. Kaynak değişiklikleri geliştirici sunucusunda görünür; önceden başlatılmış üretim sunucusu eski derlemeyi gösterir.
 
