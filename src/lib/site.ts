@@ -3,11 +3,11 @@ export const site = {
   location: 'Kütahya, Türkiye',
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || null,
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || null,
-  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '0534 665 84 81',
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, '') || '905346658481',
-  address: process.env.NEXT_PUBLIC_CONTACT_ADDRESS || 'Cemalettin, Çemberciler Caddesi No:51, 43100 Kütahya Merkez/Kütahya',
+  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '0537 861 05 46',
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, '') || '905378610546',
+  address: process.env.NEXT_PUBLIC_CONTACT_ADDRESS || 'Pirler Mahallesi Balıklı Caddesi No 94/A Kütahya/Merkez',
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || null,
-  mapsUrl: process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x14c9480a71f52f19:0x71f6417b62f52f6',
+  mapsUrl: process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || null,
 };
 
 export function whatsappLink(productName?: string) {

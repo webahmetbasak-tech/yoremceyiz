@@ -28,7 +28,7 @@ Sayfa fotoğrafları Next Image ile gerçek ekran genişliği ve piksel yoğunlu
 
 ## İşletme bilgileri
 
-Güncelleme: Kullanıcının sağladığı `0534 665 84 81` telefonu ve `Cemalettin, Çemberciler Caddesi No:51, 43100 Kütahya Merkez/Kütahya` adresi merkezi site verisine eklendi. WhatsApp bağlantısı `905346658481` numarasını, gömülü harita açık adresi kullanır. Dış harita bağlantısı kullanıcının paylaştığı işletme konumudur.
+Güncelleme: Kullanıcının sağladığı `0537 861 05 46` telefonu ve `Pirler Mahallesi Balıklı Caddesi No 94/A Kütahya/Merkez` adresi merkezi site verisine eklendi. WhatsApp bağlantısı `905378610546` numarasını kullanır. Gömülü harita ve dış harita bağlantısı açık adresi sorgular.
 
 Bu değerler `.env.example` içinde de yer alır; `.env.local` veya yayın ortamındaki ilgili `NEXT_PUBLIC_*` değişkenleri varsayılanları değiştirebilir. WhatsApp numarası ülke koduyla girilir. Yayın ortamının ayarları değiştiğinde yeniden derlenmelidir.
 

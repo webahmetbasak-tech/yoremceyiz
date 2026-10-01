@@ -36,7 +36,7 @@ Tarayıcı yüklü değilse: `npx playwright install chromium`. Testler üretim 
 
 ## İçerik ve yayın ayarları
 
-Kullanıcının sağladığı telefon (`0534 665 84 81`), WhatsApp (`905346658481`), açık adres ve Google Haritalar bağlantısı `src/lib/site.ts` içinde varsayılan olarak tanımlıdır. `.env.example` aynı bilgileri içerir; ortam değişkenleri bu değerleri değiştirebilir. Eksik e-posta ve sosyal hesaplar arayüzde gösterilmez. Alan adı girilmediğinde `robots.txt` indekslemeyi engeller; sitemap boş kalır. `NEXT_PUBLIC_SITE_URL` HTTPS üretim alan adı olarak girilince canonical, sitemap ve indeksleme açılır. Yayın ayarları değiştiğinde yeniden derleyin.
+Kullanıcının sağladığı telefon (`0537 861 05 46`), WhatsApp (`905378610546`) ve adres (`Pirler Mahallesi Balıklı Caddesi No 94/A Kütahya/Merkez`) `src/lib/site.ts` içinde varsayılan olarak tanımlıdır. Google Haritalar bağlantısı açık adresten oluşturulur. `.env.example` aynı bilgileri içerir; ortam değişkenleri bu değerleri değiştirebilir. Eksik e-posta ve sosyal hesaplar arayüzde gösterilmez. Alan adı girilmediğinde `robots.txt` indekslemeyi engeller; sitemap boş kalır. `NEXT_PUBLIC_SITE_URL` HTTPS üretim alan adı olarak girilince canonical, sitemap ve indeksleme açılır. Yayın ayarları değiştiğinde yeniden derleyin.
 
 Ürün ve marka verileri: `src/lib/site.ts`. Gerçek kumaş içeriği, teknik, stok, fiyat, kurucu veya kuruluş tarihi uydurulmamıştır. Kampanya görselleri yapay zekâyla bu proje için üretilen tasarım görselleridir; stok veya gerçek atölye fotoğrafı olarak sunulmaz. Ürün sayfalarındaki yakın planlar aynı tasarımın kırpımlarıdır. Gerçek ürün doğrulaması gelmeden Product/Offer/Review şeması yayımlanmaz.
 
